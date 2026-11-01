@@ -3,12 +3,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pathlib import Path
 
-raw = pd.read_excel(r"C:\Users\preet\OneDrive\Desktop\PROJECT 2027\P1\P1 DATA.xlsx", header=None)
+BASE_DIR = Path(__file__).resolve().parent
 
-print(raw.head(10))
+DATA_FILE = BASE_DIR / "data" / "raw" / "P1 DATA.xlsx"
 
-print("Original dimensions:", raw.shape)
+raw = pd.read_excel(DATA_FILE, header=None)
 
 # Locating the monthly data header
 header_index = raw[
@@ -527,14 +528,3 @@ plt.tight_layout()
 
 plt.savefig("yoy_growth.png", dpi=300)
 plt.show()
-
-import os
-
-os.makedirs("data", exist_ok=True)
-
-monthly_sales.to_csv(
-    "data/cleaned_retail_data.csv",
-    index=False
-)
-
-print("Cleaned dataset exported successfully.")
