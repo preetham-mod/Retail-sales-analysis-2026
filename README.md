@@ -60,3 +60,30 @@ The analysis has several limitations:
 - The interpretation of month-to-month movements depends on whether the original series is seasonally adjusted.
 - The analysis does not incorporate external explanatory variables such as inflation, unemployment, consumer confidence, or interest rates.
 
+Visualisations
+
+The following charts illustrate the trends and patterns identified in the analysis.
+
+1. Monthly Retail Sales Trend
+
+![Monthly Retail Sales Trend](visualisations/monthly_retail_sales_trend.png)
+
+2. Annual Average Retail Sales
+
+![Annual Average Retail Sales](visualisations/annual_average_retail_sales.png)
+
+3. Retail Sales Volatility
+
+![Retail Sales Volatility](visualisations/retail_sales_volatility.png)
+
+4. Year-over-Year Growth Analysis
+
+![Year-over-Year Growth Analysis](visualisations/yoy_growth_analysis.png)
+
+Project Structure
+
+- `data/` – Original and cleaned datasets.
+- `visualisations/` – Generated analytical charts.
+- `Retail_Sales_Analysis.py` – Python analysis script.
+- `requirements.txt` – Required Python packages.
+- `README.md` – Project documentation.
